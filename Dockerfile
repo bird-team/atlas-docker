@@ -88,5 +88,22 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
 
 ## Install R packages
 RUN install2.r --error --deps TRUE \
-  sp sf raster rgdal bookdown rmarkdown knitr dplyr plyr RcppTOML ggplot2 \
-  lubriate assertthat rnaturalearth rnaturalearthhires leaflet R6 data.table magrittr
+  assertthat \
+  bookdown \
+  data.table \
+  dplyr \
+  ggplot2 \
+  knitr \
+  leaflet \
+  lubriate \
+  magrittr \
+  plyr \
+  raster \
+  RcppTOML \
+  rgdal \
+  rmarkdown \
+  rnaturalearth \
+  rnaturalearthhires \
+  R6 \
+  sp \
+  sf
