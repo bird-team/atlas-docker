@@ -3,7 +3,7 @@
 
 # Docker build environment
 
-This repository contains the [Docker](http://docker.com) build environment for generating the Brisbane Birds Atlas.
+This repository contains the [Docker](http://docker.com) build environment for building the Brisbane Birds Atlas.
 
 To obtain a copy of the image, execute the following commands in the terminal:
 
