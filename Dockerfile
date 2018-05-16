@@ -25,7 +25,8 @@ RUN apt-get update \
     netcdf-bin \
     protobuf-compiler \
     tk-dev \
-    unixodbc-dev
+    unixodbc-dev \
+    wget
 
 ## Add LaTeX, rticles and bookdown support (from rocker/verse)
 RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
@@ -70,14 +71,16 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
   && /opt/TinyTeX/bin/*/tlmgr path add \
   && tlmgr install metafont mfware inconsolata tex ae parskip listings \
   && tlmgr path add \
-  && Rscript -e "source('https://install-github.me/yihui/tinytex'); tinytex::r_texmf()" \
+  && Rscript -e "source('http://install-github.me/yihui/tinytex'); tinytex::r_texmf()" \
   && chown -R root:staff /opt/TinyTeX \
   && chmod -R g+w /opt/TinyTeX \
   && chmod -R g+wx /opt/TinyTeX/bin
 
 ## Install Pandoc
-RUN dpkg -i \
-  https://github.com/jgm/pandoc/releases/download/2.2.1/pandoc-2.2.1-1-amd64.deb
+RUN wget "https://github.com/jgm/pandoc/releases/download/2.2.1/pandoc-2.2.1-1-amd64.deb" \
+    && dpkg -i pandoc-2.2.1-1-amd64.deb \
+    && rm pandoc-2.2.1-1-amd64.deb \
+    && apt-get update
 
 ## Configure R profile
 RUN echo "options(repos = \"https://mran.microsoft.com/snapshot/2018-05-16\")" \
