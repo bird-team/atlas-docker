@@ -1,3 +1,6 @@
+[![Docker Build Status](https://img.shields.io/docker/build/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/brisbanebirdteam/docker/)
+[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/_/ubuntu/latest.svg)](https://hub.docker.com/r/brisbanebirdteam/docker/)
+
 # Docker build environment
 
 This repository contains the [Docker](http://docker.com) build environment for generating the Brisbane Birds Atlas.
