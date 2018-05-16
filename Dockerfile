@@ -87,7 +87,7 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   >> ~/.Rprofile
 
 ## Install R packages
-RUN install2.r --error --deps TRUE \
+RUN install2.r --error --deps NA \
   assertthat \
   bookdown \
   data.table \
