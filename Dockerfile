@@ -87,10 +87,11 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   >> ~/.Rprofile
 
 ## Install R packages
-RUN install2.r --error --skipinstalled --deps TRUE \
+RUN install2.r --error --deps TRUE \
   assertthat \
   bookdown \
   data.table \
+  devtools \
   dplyr \
   ggplot2 \
   knitr \
@@ -100,11 +101,13 @@ RUN install2.r --error --skipinstalled --deps TRUE \
   plyr \
   raster \
   RcppTOML \
+  remotes \
   rgdal \
   rgeos \
   rmarkdown \
   rnaturalearth \
-  rnaturalearthhires \
   R6 \
   sp \
   sf
+
+RUN R -e "devtools::install_github('ropenscilabs/rnaturalearthhires')"
