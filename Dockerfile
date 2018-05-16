@@ -110,4 +110,6 @@ RUN install2.r --error --deps TRUE \
   sp \
   sf
 
-RUN R -e "devtools::install_github('ropenscilabs/rnaturalearthhires')"
+COPY ./rnaturalearthhires_0.1.0.tar.gz /tmp/rnaturalearthhires_0.1.0.tar.gz
+
+RUN R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz
