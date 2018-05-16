@@ -80,14 +80,14 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
 RUN wget "https://github.com/jgm/pandoc/releases/download/2.2.1/pandoc-2.2.1-1-amd64.deb" \
     && dpkg -i pandoc-2.2.1-1-amd64.deb \
     && rm pandoc-2.2.1-1-amd64.deb \
-    && apt-get update
+    && apt-get install -f
 
 ## Configure R profile
 RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   >> ~/.Rprofile
 
 ## Install R packages
-RUN install2.r --error --deps TRUE \
+RUN install2.r --error --skipinstalled --deps TRUE \
   assertthat \
   bookdown \
   data.table \
@@ -95,12 +95,13 @@ RUN install2.r --error --deps TRUE \
   ggplot2 \
   knitr \
   leaflet \
-  lubriate \
+  lubridate \
   magrittr \
   plyr \
   raster \
   RcppTOML \
   rgdal \
+  rgeos \
   rmarkdown \
   rnaturalearth \
   rnaturalearthhires \
