@@ -1,4 +1,4 @@
-FROM rocker/r-ver/3.4.4
+FROM rocker/r-ver:3.4.4
 
 LABEL maintainer="jeffrey.hanson@uqconnect.edu.au"
 
