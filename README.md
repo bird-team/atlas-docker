@@ -1,5 +1,5 @@
-[![Docker Build Status](https://img.shields.io/docker/build/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/brisbanebirdteam/docker/)
-[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/_/ubuntu/latest.svg)](https://hub.docker.com/r/brisbanebirdteam/docker/)
+[![Docker Build Status](https://img.shields.io/docker/build/brisbanebirdteam/docker.svg)](https://hub.docker.com/r/brisbanebirdteam/docker/)
+[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/brisbanebirdteam/docker/latest.svg)](https://hub.docker.com/r/brisbanebirdteam/docker/)
 
 # Docker build environment
 
