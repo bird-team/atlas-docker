@@ -83,7 +83,7 @@ RUN wget "https://github.com/jgm/pandoc/releases/download/2.2.1/pandoc-2.2.1-1-a
     && apt-get update
 
 ## Configure R profile
-RUN echo "options(repos = \"https://mran.microsoft.com/snapshot/2018-05-16\")" \
+RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   >> ~/.Rprofile
 
 ## Install R packages
