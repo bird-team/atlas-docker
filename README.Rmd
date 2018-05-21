@@ -32,12 +32,14 @@ names(out) <- c("Package", "Version")
 out$Description <- vapply(out$Package,
                           function(x) utils::packageDescription(x)$Title,
                           character(1))
+out$Description <- gsub("\n", "", out$Description, fixed = TRUE)
 out$Package <- paste0("[", out$Package,
                       "](https://CRAN.R-project.org/package=",
                       out$Package, ")")
 rownames(out) <- NULL
 
 # generate markdown table
+options(width = 1000)
 knitr::kable(out, align = "c", format = "markdown",
              col.names = paste0("**", names(out), "**"))
 ```
