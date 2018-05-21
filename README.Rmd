@@ -34,7 +34,14 @@ out$Description <- vapply(out$Package,
                           character(1))
 out$Package <- vapply(out$Package, function(x) {
   u <- utils::packageDescription(x)$URL
-  if (!is.null(u)) return(paste0("[", x, "](", u, ")"))
+  if (!is.null(u)) {
+    if (!grepl(",\n", u, fixed = TRUE)) {
+      return(paste0("[", x, "](", u[1], ")"))
+    } else {
+      return(paste0("[", x, "](",
+             strsplit(u[1], ",\n", fixed = TRUE)[[1]][[1]], ")"))
+    }
+  }
   return(paste0("[", x, "](https://CRAN.R-project.org/package=", x, ")"))
 }, character(1))
 rownames(out) <- NULL
