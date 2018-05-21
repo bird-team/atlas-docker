@@ -6,8 +6,8 @@ output:
 
 <!--- README.md is generated from README.Rmd. Please edit that file -->
 
-[![Docker Build Status](https://img.shields.io/docker/build/brisbanebirdteam/docker.svg)](https://hub.docker.com/r/brisbanebirdteam/docker/)
-[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/brisbanebirdteam/docker/latest.svg)](https://hub.docker.com/r/brisbanebirdteam/docker/)
+[![Docker Build Status](https://img.shields.io/docker/build/brisbanebirdteam/build-env.svg)](https://hub.docker.com/r/brisbanebirdteam/build-env/)
+[![ImageLayers Size](https://images.microbadger.com/badges/image/brisbanebirdteam/build-env.svg)](https://hub.docker.com/r/brisbanebirdteam/build-env/)
 
 # Brisbane Bird Atlas Build Environment
 
