@@ -1,0 +1,45 @@
+---
+output:
+  rmarkdown::github_document:
+    html_preview: no
+---
+
+<!--- README.md is generated from README.Rmd. Please edit that file -->
+
+[![Docker Build Status](https://img.shields.io/docker/build/brisbanebirdteam/docker.svg)](https://hub.docker.com/r/brisbanebirdteam/docker/)
+[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/brisbanebirdteam/docker/latest.svg)](https://hub.docker.com/r/brisbanebirdteam/docker/)
+
+# Brisbane Bird Atlas Build Environment
+
+This repository contains the [Docker](http://docker.com) build environment for compiling the Brisbane Birds Atlas.
+
+## Usage
+
+To obtain download the image, execute the following command in the terminal:
+
+```
+docker pull brisbanebirdteam/build-env:latest
+```
+
+## Software
+
+This image contains [_R_ (version 3.4.4)](https://cran.r-project.org/), [_TinyTex_](https://yihui.name/tinytex/), [_Pandoc_ (version 2.2.1-1)](https://pandoc.org/), and assorted Debian packages for geospatial analysis. It also contains _R_ packages for manipulating data and building the atlas website (obtained from the [Microsoft R Application Network snapshot taken on 16th May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
+
+```{r, echo = FALSE, results = "asis"}
+# create image meta-data
+out <- as.data.frame(installed.packages()[, c("Package", "Version")])
+names(out) <- c("Package", "Version")
+out$Description <- vapply(out$Package,
+                          function(x) utils::packageDescription(x)$Title,
+                          character(1))
+out$Package <- vapply(out$Package, function(x) {
+  u <- utils::packageDescription(x)$URL
+  if (!is.null(u)) return(paste0("[", x, "](", u, ")"))
+  return(paste0("[", x, "](https://CRAN.R-project.org/package=", x, ")"))
+}, character(1))
+rownames(out) <- NULL
+
+# generate markdown table
+knitr::kable(out, align = "c", format = "markdown",
+             col.names = paste0("**", names(out), "**"))
+```

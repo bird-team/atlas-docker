@@ -36,8 +36,8 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
   && dpkg -i texlive-local.deb \
   && rm texlive-local.deb \
   && apt-get update \
-  && dpkg -i pandoc-2.2.1-1-amd64.deb \
-  && rm pandoc-2.2.1-1-amd64.deb \
+  && dpkg -i /tmp/pandoc-2.2.1-1-amd64.deb \
+  && rm /tmp/pandoc-2.2.1-1-amd64.deb \
   && apt-get install -y --no-install-recommends \
     ## for rJava
     default-jdk \
@@ -106,4 +106,5 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   R6 \
   sp \
   sf \
-  && R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz
+  && R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz \
+  && rm /tmp/rnaturalearthhires_0.1.0.tar.gz
