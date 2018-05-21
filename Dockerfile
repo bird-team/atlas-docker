@@ -2,6 +2,9 @@ FROM rocker/r-ver:3.4.4
 
 LABEL maintainer="jeffrey.hanson@uqconnect.edu.au"
 
+## Copt files
+COPY . /tmp
+
 ## Add spatial support (from rocker/geospatial)
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -33,6 +36,8 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
   && dpkg -i texlive-local.deb \
   && rm texlive-local.deb \
   && apt-get update \
+  && dpkg -i pandoc-2.2.1-1-amd64.deb \
+  && rm pandoc-2.2.1-1-amd64.deb \
   && apt-get install -y --no-install-recommends \
     ## for rJava
     default-jdk \
@@ -76,18 +81,10 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
   && chmod -R g+w /opt/TinyTeX \
   && chmod -R g+wx /opt/TinyTeX/bin
 
-## Install Pandoc
-RUN wget "https://github.com/jgm/pandoc/releases/download/2.2.1/pandoc-2.2.1-1-amd64.deb" \
-    && dpkg -i pandoc-2.2.1-1-amd64.deb \
-    && rm pandoc-2.2.1-1-amd64.deb \
-    && apt-get install -f
-
-## Configure R profile
+## Configure R profile and install R packages
 RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
-  >> ~/.Rprofile
-
-## Install R packages
-RUN install2.r --error --deps NA \
+  >> ~/.Rprofile \
+  && install2.r --error --deps NA \
   assertthat \
   bookdown \
   data.table \
@@ -108,8 +105,5 @@ RUN install2.r --error --deps NA \
   rnaturalearth \
   R6 \
   sp \
-  sf
-
-COPY ./rnaturalearthhires_0.1.0.tar.gz /tmp/rnaturalearthhires_0.1.0.tar.gz
-
-RUN R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz
+  sf \
+  && R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz
