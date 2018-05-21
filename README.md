@@ -13,7 +13,7 @@ environment for compiling the Brisbane Birds Atlas.
 
 ## Usage
 
-To obtain download the image, execute the following command in the
+To download the image, execute the following command in the
 terminal:
 
     docker pull brisbanebirdteam/build-env:latest
