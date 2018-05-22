@@ -1,8 +1,10 @@
 
 <!--- README.md is generated from README.Rmd. Please edit that file -->
 
-[![Docker Build Status](https://img.shields.io/docker/build/brisbanebirdteam/build-env.svg)](https://hub.docker.com/r/brisbanebirdteam/build-env/)
-[![ImageLayers Size](https://images.microbadger.com/badges/image/brisbanebirdteam/build-env.svg)](https://hub.docker.com/r/brisbanebirdteam/build-env/)
+[![Docker Build
+Status](https://img.shields.io/docker/build/brisbanebirdteam/build-env.svg)](https://hub.docker.com/r/brisbanebirdteam/build-env/)
+[![ImageLayers
+Size](https://images.microbadger.com/badges/image/brisbanebirdteam/build-env.svg)](https://hub.docker.com/r/brisbanebirdteam/build-env/)
 
 # Brisbane Bird Atlas Build Environment
 
@@ -11,8 +13,7 @@ environment for compiling the Brisbane Birds Atlas.
 
 ## Usage
 
-To download the image, execute the following command in the
-terminal:
+To download the image, execute the following command in the terminal:
 
     docker pull "brisbanebirdteam/build-env:latest"
 
@@ -35,6 +36,7 @@ May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
 |              [bindr](https://CRAN.R-project.org/package=bindr)              |    0.1.1    |                                    Parametrized Active Bindings                                    |
 |           [bindrcpp](https://CRAN.R-project.org/package=bindrcpp)           |    0.2.2    |                               An ‘Rcpp’ Interface to Active Bindings                               |
 |           [bookdown](https://CRAN.R-project.org/package=bookdown)           |     0.7     |                      Authoring Books and Technical Documents with R Markdown                       |
+|         [cellranger](https://CRAN.R-project.org/package=cellranger)         |    1.1.0    |                       Translate Spreadsheet Cell Ranges to Rows and Columns                        |
 |              [class](https://CRAN.R-project.org/package=class)              |   7.3-14    |                                    Functions for Classification                                    |
 |           [classInt](https://CRAN.R-project.org/package=classInt)           |    0.2-3    |                                 Choose Univariate Class Intervals                                  |
 |                [cli](https://CRAN.R-project.org/package=cli)                |    1.0.0    |                           Helpers for Developing Command Line Interfaces                           |
@@ -88,6 +90,8 @@ May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
 |       [RColorBrewer](https://CRAN.R-project.org/package=RColorBrewer)       |    1.1-2    |                                        ColorBrewer Palettes                                        |
 |               [Rcpp](https://CRAN.R-project.org/package=Rcpp)               |   0.12.16   |                                   Seamless R and C++ Integration                                   |
 |           [RcppTOML](https://CRAN.R-project.org/package=RcppTOML)           |    0.1.3    |                    ‘Rcpp’ Bindings to Parser for Tom’s Obvious Markup Language                     |
+|             [readxl](https://CRAN.R-project.org/package=readxl)             |    1.1.0    |                                          Read Excel Files                                          |
+|            [rematch](https://CRAN.R-project.org/package=rematch)            |    1.0.1    |                            Match Regular Expressions with a Nicer ‘API’                            |
 |            [remotes](https://CRAN.R-project.org/package=remotes)            |    1.1.1    |                 R Package Installation from Remote Repositories, Including’GitHub’                 |
 |           [reshape2](https://CRAN.R-project.org/package=reshape2)           |    1.4.3    |                       Flexibly Reshape Data: A Reboot of the Reshape Package                       |
 |              [rgdal](https://CRAN.R-project.org/package=rgdal)              |   1.2-20    |                       Bindings for the ‘Geospatial’ Data Abstraction Library                       |
