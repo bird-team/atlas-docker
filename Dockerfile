@@ -98,6 +98,7 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   plyr \
   raster \
   RcppTOML \
+  readxl \
   remotes \
   rgdal \
   rgeos \
