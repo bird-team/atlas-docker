@@ -107,5 +107,6 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   R6 \
   sp \
   sf \
+  && R -e "devtools::install_github('tidyverse/ggplot2@eecc450',upgrade_dependencies=FALSE)" \
   && R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz \
   && rm /tmp/rnaturalearthhires_0.1.0.tar.gz
