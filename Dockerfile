@@ -87,10 +87,12 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   && install2.r --error --deps NA \
   assertthat \
   bookdown \
+  crosstalk \
   data.table \
   devtools \
   dplyr \
   ggplot2 \
+  gridExtra \
   knitr \
   leaflet \
   lubridate \
@@ -107,6 +109,8 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   R6 \
   sp \
   sf \
+  tidyr \
+  viridis \
   && R -e "devtools::install_github('tidyverse/ggplot2@eecc450',upgrade_dependencies=FALSE)" \
   && R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz \
   && rm /tmp/rnaturalearthhires_0.1.0.tar.gz
