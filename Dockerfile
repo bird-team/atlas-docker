@@ -97,6 +97,7 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   leaflet \
   lubridate \
   magrittr \
+  plotly \
   plyr \
   raster \
   RcppTOML \
