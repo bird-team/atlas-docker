@@ -5,10 +5,11 @@ build:
 
 readme:
 	@docker run --name=brisbanebird -dt 'brisbanebirdteam/build-env:latest' \
-	&& docker cp README.Rmd brisbanebird:/tmp/ \
+	&& docker cp README.Rmd brisbanebird:/tmp \
 	&& docker exec brisbanebird sh -c "R -e \"rmarkdown::render('/tmp/README.Rmd', clean = TRUE)\"" \
 	&& docker cp brisbanebird:/tmp/README.md . \
-	&& rm -rf /tmp/* || true
+	&& docker exec brisbanebird sh -c "rm /tmp/README.Rmd" \
+	&& docker exec brisbanebird sh -c "rm /tmp/README.md" || true
 	@docker stop -t 1 brisbanebird || true && docker rm brisbanebird || true
 
 pull:
