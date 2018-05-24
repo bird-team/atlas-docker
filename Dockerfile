@@ -74,7 +74,7 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
     sh -s - --admin --no-path \
   && mv ~/.TinyTeX /opt/TinyTeX \
   && /opt/TinyTeX/bin/*/tlmgr path add \
-  && tlmgr install metafont mfware inconsolata tex ae parskip listings \
+  && tlmgr install metafont mfware inconsolata tex ae parskip listings float makecell setspace \
   && tlmgr path add \
   && Rscript -e "source('http://install-github.me/yihui/tinytex'); tinytex::r_texmf()" \
   && chown -R root:staff /opt/TinyTeX \
