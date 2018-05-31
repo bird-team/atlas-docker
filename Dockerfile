@@ -75,13 +75,16 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
   && mv ~/.TinyTeX /opt/TinyTeX \
   && /opt/TinyTeX/bin/*/tlmgr path add \
   && tlmgr install \
+    atbegshi \
     ae \
+    changepage \
     etoolbox \
     filehook \
     float \
     inconsolata \
     listings \
     makecell \
+    makeidx \
     metafont \
     mfware \
     parskip \
