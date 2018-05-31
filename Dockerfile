@@ -76,6 +76,7 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
   && /opt/TinyTeX/bin/*/tlmgr path add \
   && tlmgr install \
     ae \
+    etoolbox \
     filehook \
     float \
     inconsolata \
