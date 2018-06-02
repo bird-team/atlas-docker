@@ -95,10 +95,7 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
   && Rscript -e "source('http://install-github.me/yihui/tinytex'); tinytex::r_texmf()" \
   && chown -R root:staff /opt/TinyTeX \
   && chmod -R g+w /opt/TinyTeX \
-  && chmod -R g+wx /opt/TinyTeX/bin \
-  && tlmgr install \
-    atbegshi \
-    makeidx
+  && chmod -R g+wx /opt/TinyTeX/bin
 
 ## Configure R profile and install R packages
 RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
