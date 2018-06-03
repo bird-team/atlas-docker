@@ -91,6 +91,7 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
     tex \
     titlesec \
     tocloft \
+    varwidth \
     unicode-math \
   && tlmgr path add \
   && Rscript -e "source('http://install-github.me/yihui/tinytex'); tinytex::r_texmf()" \
