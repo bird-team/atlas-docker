@@ -87,6 +87,7 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
     mfware \
     parskip \
     setspace \
+    tabu \
     tex \
     titlesec \
     tocloft \
