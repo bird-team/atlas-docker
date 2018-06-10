@@ -41,6 +41,7 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/so
     protobuf-compiler \
     tk-dev \
     unixodbc-dev \
+    makejvf \
     wget
 
 ## Add LaTeX, rticles and bookdown support (from rocker/verse)
