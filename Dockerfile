@@ -7,7 +7,7 @@ COPY . /tmp
 
 ## Add spatial support (from rocker/geospatial)
 RUN apt-get update \
-  && add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable
+  && add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable \
   && apt-get update \
   && apt-get install -y --no-install-recommends \
     lbzip2 \
