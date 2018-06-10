@@ -30,7 +30,6 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/so
     libglu1-mesa-dev \
     libhdf4-alt-dev \
     libhdf5-dev \
-    libjq-dev \
     liblwgeom-dev \
     libproj-dev \
     libprotobuf-dev \
