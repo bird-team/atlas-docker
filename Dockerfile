@@ -12,7 +12,7 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/so
   && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 \
   && apt-get update \
   && apt-get -y upgrade \
-  && sudo apt-get build-dep r-base \
+  && apt-get build-dep r-base \
   && apt-get install -y software-properties-common \
   && add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable \
   && apt-get update \
