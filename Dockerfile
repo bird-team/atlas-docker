@@ -4,6 +4,8 @@ LABEL maintainer="jeffrey.hanson@uqconnect.edu.au"
 
 ## Define environmental variables
 ENV R_BASE_VERSION 3.4.4
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
 
 ## Copy files
 COPY . /tmp
@@ -12,6 +14,10 @@ COPY . /tmp
 RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/sources.list \
   && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 \
   && apt-get update \
+  && apt-get install -y locales \
+  && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
+  && locale-gen en_US.utf8 \
+  && /usr/sbin/update-locale LANG=en_US.UTF-8 \
   && apt-get install -y software-properties-common \
   && add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable \
   && apt-get update \
@@ -46,7 +52,8 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/so
   && ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r \
   && ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r \
   && ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r \
-  && ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r
+  && ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r \
+  && install.r docopt
 
 ## Setup latex
 ## Add LaTeX, rticles and bookdown support (from rocker/verse)
