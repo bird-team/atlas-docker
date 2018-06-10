@@ -2,16 +2,23 @@ FROM ubuntu:16.04
 
 LABEL maintainer="jeffrey.hanson@uqconnect.edu.au"
 
+## Define environmental variables
 ENV R_BASE_VERSION 3.4.4
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
 
 ## Copy files
 COPY . /tmp
 
-## Setup R and spatial system pkgs
+## Configure default locale, see https://github.com/rocker-org/rocker/issues/19
+RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
+  && locale-gen en_US.utf8 \
+  && /usr/sbin/update-locale LANG=en_US.UTF-8
+
+## Setup system pkgs
 RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/sources.list \
   && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 \
   && apt-get update \
-  && apt-get build-dep -y r-base \
   && apt-get install -y software-properties-common \
   && add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable \
   && apt-get update \
@@ -41,12 +48,18 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/so
     protobuf-compiler \
     tk-dev \
     unixodbc-dev \
-    makejvf \
-    wget
+    wget \
+  && echo 'source("/etc/R/Rprofile.site")' >> /etc/littler.r \
+  && ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r \
+  && ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r \
+  && ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r \
+  && ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r
 
+## Setup latex
 ## Add LaTeX, rticles and bookdown support (from rocker/verse)
 RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
-  && dpkg -i texlive-local.deb \
+  && apt-get remove -y makejvf texlive \
+  && dpkg -i --force-all texlive-local.deb \
   && rm texlive-local.deb \
   && apt-get update \
   && dpkg -i /tmp/pandoc-2.2.1-1-amd64.deb \
