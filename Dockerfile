@@ -4,16 +4,9 @@ LABEL maintainer="jeffrey.hanson@uqconnect.edu.au"
 
 ## Define environmental variables
 ENV R_BASE_VERSION 3.4.4
-ENV LC_ALL en_US.UTF-8
-ENV LANG en_US.UTF-8
 
 ## Copy files
 COPY . /tmp
-
-## Configure default locale, see https://github.com/rocker-org/rocker/issues/19
-RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
-  && locale-gen en_US.utf8 \
-  && /usr/sbin/update-locale LANG=en_US.UTF-8
 
 ## Setup system pkgs
 RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/sources.list \
