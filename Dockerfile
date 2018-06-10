@@ -1,16 +1,25 @@
-FROM rocker/r-ver:3.4.4
+FROM ubuntu:16.04
 
 LABEL maintainer="jeffrey.hanson@uqconnect.edu.au"
 
-## Copt files
+ENV R_BASE_VERSION 3.4.4
+
+## Copy files
 COPY . /tmp
 
-## Add spatial support (from rocker/geospatial)
-RUN apt-get update \
+## Setup R and spatial system pkgs
+RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/sources.list \
+  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 \
+  && apt-get update \
+  && apt-get -y upgrade \
+  && sudo apt-get build-dep r-base \
   && apt-get install -y software-properties-common \
   && add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable \
   && apt-get update \
   && apt-get install -y --no-install-recommends \
+    r-base=${R_BASE_VERSION}-* \
+    r-base-dev=${R_BASE_VERSION}-* \
+    r-recommended=${R_BASE_VERSION}-* \
     lbzip2 \
     libfftw3-dev \
     libgdal-dev \
