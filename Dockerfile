@@ -20,6 +20,8 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/so
     r-base=${R_BASE_VERSION}-* \
     r-base-dev=${R_BASE_VERSION}-* \
     r-recommended=${R_BASE_VERSION}-* \
+    littler \
+    r-cran-littler \
     lbzip2 \
     libfftw3-dev \
     libgdal-dev \
