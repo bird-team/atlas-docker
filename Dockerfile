@@ -1,32 +1,13 @@
-FROM ubuntu:16.04
+FROM rocker/r-ver:3.4.4
 
 LABEL maintainer="jeffrey.hanson@uqconnect.edu.au"
 
-## Define environmental variables
-ENV R_BASE_VERSION 3.4.4
-ENV LC_ALL en_US.UTF-8
-ENV LANG en_US.UTF-8
-
-## Copy files
+## Copt files
 COPY . /tmp
 
-## Setup system pkgs
-RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/sources.list \
-  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 \
-  && apt-get update \
-  && apt-get install -y locales \
-  && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen \
-  && locale-gen en_US.utf8 \
-  && /usr/sbin/update-locale LANG=en_US.UTF-8 \
-  && apt-get install -y software-properties-common \
-  && add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable \
-  && apt-get update \
+## Add spatial support (from rocker/geospatial)
+RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    r-base=${R_BASE_VERSION}-* \
-    r-base-dev=${R_BASE_VERSION}-* \
-    r-recommended=${R_BASE_VERSION}-* \
-    littler \
-    r-cran-littler \
     lbzip2 \
     libfftw3-dev \
     libgdal-dev \
@@ -36,6 +17,7 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/so
     libglu1-mesa-dev \
     libhdf4-alt-dev \
     libhdf5-dev \
+    libjq-dev \
     liblwgeom-dev \
     libproj-dev \
     libprotobuf-dev \
@@ -47,19 +29,11 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/  " >> /etc/apt/so
     protobuf-compiler \
     tk-dev \
     unixodbc-dev \
-    wget \
-  && echo 'source("/etc/R/Rprofile.site")' >> /etc/littler.r \
-  && ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r \
-  && ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r \
-  && ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r \
-  && ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r \
-  && install.r docopt
+    wget
 
-## Setup latex
 ## Add LaTeX, rticles and bookdown support (from rocker/verse)
 RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
-  && apt-get remove -y makejvf texlive \
-  && dpkg -i --force-all texlive-local.deb \
+  && dpkg -i texlive-local.deb \
   && rm texlive-local.deb \
   && apt-get update \
   && dpkg -i /tmp/pandoc-2.2.1-1-amd64.deb \
@@ -141,7 +115,6 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   kableExtra \
   leaflet \
   lubridate \
-  lwgeom \
   magrittr \
   plotly \
   plyr \
@@ -158,6 +131,7 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   sf \
   tidyr \
   viridis \
+  && install2.r --error --deps NA -- "--configure-args=\"--without-liblwgeom\"" lwgeom \
   && R -e "devtools::install_github('tidyverse/ggplot2@eecc450',upgrade_dependencies=FALSE)" \
   && R -e "devtools::install_github('thomasp85/patchwork@6979eb1',upgrade_dependencies=FALSE)" \
   && R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz \
