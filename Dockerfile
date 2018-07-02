@@ -109,6 +109,7 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   data.table \
   devtools \
   dplyr \
+  FNN \
   ggplot2 \
   gridExtra \
   knitr \
