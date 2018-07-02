@@ -128,8 +128,9 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   rmarkdown \
   rnaturalearth \
   R6 \
-  sp \
   sf \
+  smoothr \
+  sp \
   tidyr \
   viridis \
   && install2.r --error --deps NA -- "--configure-args=\"--without-liblwgeom\"" lwgeom \
