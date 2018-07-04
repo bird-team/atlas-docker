@@ -108,6 +108,7 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   crosstalk \
   data.table \
   devtools \
+  doParallel \
   dplyr \
   FNN \
   ggplot2 \
