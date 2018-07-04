@@ -40,6 +40,7 @@ May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
 |              [class](https://CRAN.R-project.org/package=class)              |   7.3-14    |                                    Functions for Classification                                     |
 |           [classInt](https://CRAN.R-project.org/package=classInt)           |    0.2-3    |                                  Choose Univariate Class Intervals                                  |
 |                [cli](https://CRAN.R-project.org/package=cli)                |    1.0.0    |                           Helpers for Developing Command Line Interfaces                            |
+|          [codetools](https://CRAN.R-project.org/package=codetools)          |   0.2-15    |                                      Code Analysis Tools for R                                      |
 |         [colorspace](https://CRAN.R-project.org/package=colorspace)         |    1.3-2    |                                      Color Space Manipulation                                       |
 |             [crayon](https://CRAN.R-project.org/package=crayon)             |    1.3.4    |                                       Colored Terminal Output                                       |
 |          [crosstalk](https://CRAN.R-project.org/package=crosstalk)          |    1.0.0    |                             Inter-Widget Interactivity for HTML Widgets                             |
@@ -50,9 +51,12 @@ May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
 |          [dichromat](https://CRAN.R-project.org/package=dichromat)          |    2.0-0    |                                    Color Schemes for Dichromats                                     |
 |             [digest](https://CRAN.R-project.org/package=digest)             |   0.6.15    |                              Create Compact Hash Digests of R Objects                               |
 |             [docopt](https://CRAN.R-project.org/package=docopt)             |    0.4.5    |                            Command-Line Interface Specification Language                            |
+|         [doParallel](https://CRAN.R-project.org/package=doParallel)         |   1.0.11    |                         Foreach Parallel Adaptor for the ‘parallel’ Package                         |
 |              [dplyr](https://CRAN.R-project.org/package=dplyr)              |    0.7.4    |                                   A Grammar of Data Manipulation                                    |
 |              [e1071](https://CRAN.R-project.org/package=e1071)              |    1.6-8    | Misc Functions of the Department of Statistics, Probability Theory Group (Formerly: E1071), TU Wien |
 |           [evaluate](https://CRAN.R-project.org/package=evaluate)           |   0.10.1    |               Parsing and Evaluation Tools that Provide More Details than the Default               |
+|                [FNN](https://CRAN.R-project.org/package=FNN)                |     1.1     |                      Fast Nearest Neighbor Search Algorithms and Applications                       |
+|            [foreach](https://CRAN.R-project.org/package=foreach)            |    1.4.4    |                              Provides Foreach Looping Construct for R                               |
 |            [ggplot2](https://CRAN.R-project.org/package=ggplot2)            | 2.2.1.9000  |                  Create Elegant Data Visualisations Using the Grammar of Graphics                   |
 |              [git2r](https://CRAN.R-project.org/package=git2r)              |   0.21.0    |                                 Provides Access to Git Repositories                                 |
 |               [glue](https://CRAN.R-project.org/package=glue)               |    1.2.0    |                                     Interpreted String Literals                                     |
@@ -65,6 +69,7 @@ May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
 |        [htmlwidgets](https://CRAN.R-project.org/package=htmlwidgets)        |     1.2     |                                         HTML Widgets for R                                          |
 |             [httpuv](https://CRAN.R-project.org/package=httpuv)             |    1.4.3    |                                  HTTP and WebSocket Server Library                                  |
 |               [httr](https://CRAN.R-project.org/package=httr)               |    1.3.1    |                                Tools for Working with URLs and HTTP                                 |
+|          [iterators](https://CRAN.R-project.org/package=iterators)          |    1.0.9    |                                  Provides Iterator Construct for R                                  |
 |           [jsonlite](https://CRAN.R-project.org/package=jsonlite)           |     1.5     |                     A Robust, High Performance JSON Parser and Generator for R                      |
 |         [kableExtra](https://CRAN.R-project.org/package=kableExtra)         |    0.8.0    |                        Construct Complex Table with ‘kable’ and Pipe Syntax                         |
 |              [knitr](https://CRAN.R-project.org/package=knitr)              |    1.20     |                    A General-Purpose Package for Dynamic Report Generation in R                     |
@@ -75,6 +80,7 @@ May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
 |            [leaflet](https://CRAN.R-project.org/package=leaflet)            |    2.0.0    |                  Create Interactive Web Maps with the JavaScript ‘Leaflet’ Library                  |
 |            [littler](https://CRAN.R-project.org/package=littler)            |    0.3.3    |                                    R at the Command-Line via ‘r’                                    |
 |          [lubridate](https://CRAN.R-project.org/package=lubridate)          |    1.7.4    |                               Make Dealing with Dates a Little Easier                               |
+|             [lwgeom](https://CRAN.R-project.org/package=lwgeom)             |    0.1-4    |                   Bindings to Selected ‘liblwgeom’ Functions for Simple Features                    |
 |           [magrittr](https://CRAN.R-project.org/package=magrittr)           |     1.5     |                                    A Forward-Pipe Operator for R                                    |
 |           [markdown](https://CRAN.R-project.org/package=markdown)           |     0.8     |                                     ‘Markdown’ Rendering for R                                      |
 |               [MASS](https://CRAN.R-project.org/package=MASS)               |   7.3-50    |                    Support Functions and Datasets for Venables and Ripley’s MASS                    |
@@ -118,6 +124,7 @@ May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
 |            [selectr](https://CRAN.R-project.org/package=selectr)            |    0.4-1    |                            Translate CSS Selectors to XPath Expressions                             |
 |                 [sf](https://CRAN.R-project.org/package=sf)                 |    0.6-2    |                                        Simple Features for R                                        |
 |              [shiny](https://CRAN.R-project.org/package=shiny)              |    1.0.5    |                                   Web Application Framework for R                                   |
+|            [smoothr](https://CRAN.R-project.org/package=smoothr)            |    0.1.0    |                                  Smooth and Tidy Spatial Features                                   |
 |        [sourcetools](https://CRAN.R-project.org/package=sourcetools)        |    0.1.7    |                          Tools for Reading, Tokenizing and Parsing R Code                           |
 |                 [sp](https://CRAN.R-project.org/package=sp)                 |    1.2-7    |                                Classes and Methods for Spatial Data                                 |
 |             [spData](https://CRAN.R-project.org/package=spData)             |   0.2.8.3   |                                    Datasets for Spatial Analysis                                    |
@@ -126,7 +133,7 @@ May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
 |             [tibble](https://CRAN.R-project.org/package=tibble)             |    1.4.2    |                                         Simple Data Frames                                          |
 |              [tidyr](https://CRAN.R-project.org/package=tidyr)              |    0.8.0    |                      Easily Tidy Data with ‘spread()’ and ‘gather()’ Functions                      |
 |         [tidyselect](https://CRAN.R-project.org/package=tidyselect)         |    0.2.4    |                                    Select from a Set of Strings                                     |
-|            [tinytex](https://CRAN.R-project.org/package=tinytex)            |    0.5.5    |         Helper Functions to Install and Maintain ‘TeX Live’, and Compile ‘LaTeX’ Documents          |
+|            [tinytex](https://CRAN.R-project.org/package=tinytex)            |   0.5.11    |         Helper Functions to Install and Maintain ‘TeX Live’, and Compile ‘LaTeX’ Documents          |
 |           [udunits2](https://CRAN.R-project.org/package=udunits2)           |    0.13     |                                      Udunits-2 Bindings for R                                       |
 |              [units](https://CRAN.R-project.org/package=units)              |    0.5-1    |                                   Measurement Units for R Vectors                                   |
 |               [utf8](https://CRAN.R-project.org/package=utf8)               |    1.1.3    |                                       Unicode Text Processing                                       |
@@ -134,7 +141,7 @@ May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
 |        [viridisLite](https://CRAN.R-project.org/package=viridisLite)        |    0.3.0    |                         Default Color Maps from ‘matplotlib’ (Lite Version)                         |
 |            [whisker](https://CRAN.R-project.org/package=whisker)            |    0.3-2    |                              {{mustache}} for R, logicless templating                               |
 |              [withr](https://CRAN.R-project.org/package=withr)              |    2.1.2    |                          Run Code ‘With’ Temporarily Modified Global State                          |
-|               [xfun](https://CRAN.R-project.org/package=xfun)               |     0.1     |                               Miscellaneous Functions by ‘Yihui Xie’                                |
+|               [xfun](https://CRAN.R-project.org/package=xfun)               |    0.2.9    |                               Miscellaneous Functions by ‘Yihui Xie’                                |
 |               [xml2](https://CRAN.R-project.org/package=xml2)               |    1.2.0    |                                              Parse XML                                              |
 |             [xtable](https://CRAN.R-project.org/package=xtable)             |    1.8-2    |                                   Export Tables to LaTeX or HTML                                    |
 |               [yaml](https://CRAN.R-project.org/package=yaml)               |   2.1.19    |                             Methods to Convert R Data to YAML and Back                              |
