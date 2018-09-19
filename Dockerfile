@@ -2,7 +2,7 @@ FROM rocker/r-ver:3.4.4
 
 LABEL maintainer="jeffrey.hanson@uqconnect.edu.au"
 
-## Copt files
+## Copy files
 COPY . /tmp
 
 ## Add spatial support (from rocker/geospatial)
@@ -94,7 +94,7 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
     varwidth \
     unicode-math \
   && tlmgr path add \
-  && Rscript -e "install.packages('xfun_0.3.tar.gz', repos = NULL, type='source')" \
+  && Rscript -e "install.packages('/tmp/xfun_0.3.tar.gz', repos = NULL, type='source')" \
   && Rscript -e "source('http://install-github.me/yihui/tinytex'); tinytex::r_texmf()" \
   && chown -R root:staff /opt/TinyTeX \
   && chmod -R g+w /opt/TinyTeX \
