@@ -141,7 +141,7 @@ May 2018](https://mran.microsoft.com/snapshot/2018-05-16)).
 |        [viridisLite](https://CRAN.R-project.org/package=viridisLite)        |    0.3.0    |                         Default Color Maps from ‘matplotlib’ (Lite Version)                         |
 |            [whisker](https://CRAN.R-project.org/package=whisker)            |    0.3-2    |                              {{mustache}} for R, logicless templating                               |
 |              [withr](https://CRAN.R-project.org/package=withr)              |    2.1.2    |                          Run Code ‘With’ Temporarily Modified Global State                          |
-|               [xfun](https://CRAN.R-project.org/package=xfun)               |    0.2.9    |                               Miscellaneous Functions by ‘Yihui Xie’                                |
+|               [xfun](https://CRAN.R-project.org/package=xfun)               |    0.3.0    |                               Miscellaneous Functions by ‘Yihui Xie’                                |
 |               [xml2](https://CRAN.R-project.org/package=xml2)               |    1.2.0    |                                              Parse XML                                              |
 |             [xtable](https://CRAN.R-project.org/package=xtable)             |    1.8-2    |                                   Export Tables to LaTeX or HTML                                    |
 |               [yaml](https://CRAN.R-project.org/package=yaml)               |   2.1.19    |                             Methods to Convert R Data to YAML and Back                              |
