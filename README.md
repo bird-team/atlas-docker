@@ -21,7 +21,7 @@ To download the image, execute the following command in the terminal:
 
 This image contains [*R* (version 3.4.4)](https://cran.r-project.org/),
 [*TinyTex*](https://yihui.name/tinytex/), [*Pandoc* (version
-2.2.1-1)](https://pandoc.org/), and assorted Debian packages for
+2.3-1)](https://pandoc.org/), and assorted Debian packages for
 geospatial analysis. It also contains *R* packages for manipulating data
 and building the atlas website (obtained from the [Microsoft R
 Application Network snapshot taken on 16th
