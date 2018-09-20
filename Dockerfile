@@ -106,9 +106,11 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   && install2.r --error --deps NA \
   assertthat \
   bookdown \
+  boxr \
   crosstalk \
   data.table \
   devtools \
+  digest \
   doParallel \
   dplyr \
   FNN \
