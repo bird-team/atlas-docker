@@ -30,7 +30,7 @@ RUN apt-get update \
     tk-dev \
     unixodbc-dev \
     wget \
-    git-core
+    git
 
 ## Add LaTeX, rticles and bookdown support (from rocker/verse)
 RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
