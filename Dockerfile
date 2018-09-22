@@ -29,7 +29,8 @@ RUN apt-get update \
     protobuf-compiler \
     tk-dev \
     unixodbc-dev \
-    wget
+    wget \
+    git-core
 
 ## Add LaTeX, rticles and bookdown support (from rocker/verse)
 RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
