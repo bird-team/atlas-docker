@@ -117,6 +117,7 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   FNN \
   ggplot2 \
   ggmap \
+  ggrepel \
   gridExtra \
   knitr \
   kableExtra \
