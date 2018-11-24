@@ -77,23 +77,31 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
   && /opt/TinyTeX/bin/*/tlmgr path add \
   && tlmgr install \
     ae \
+    capt-of \
     changepage \
+    csquotes \
     etoolbox \
+    fancyhdr \
     filehook \
     float \
     inconsolata \
+    lineno \
     listings \
     makecell \
     metafont \
     mfware \
     parskip \
     setspace \
+    siunitx \
+    subfiles \
     tabu \
     tex \
     titlesec \
     tocloft \
     varwidth \
     unicode-math \
+    xcolor \
+    xtab \
   && tlmgr path add \
   && Rscript -e "install.packages('/tmp/xfun_0.3.tar.gz', repos = NULL, type='source')" \
   && Rscript -e "source('http://install-github.me/yihui/tinytex'); tinytex::r_texmf()" \
