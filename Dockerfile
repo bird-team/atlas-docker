@@ -155,3 +155,4 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   && R CMD INSTALL /tmp/piggyback_0.0.8.tar.gz \
   && rm /tmp/rnaturalearthhires_0.1.0.tar.gz \
   && rm /tmp/piggyback_0.0.8.tar.gz
+
