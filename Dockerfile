@@ -116,6 +116,7 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   assertthat \
   bookdown \
   boxr \
+  clisymbols \
   crosstalk \
   data.table \
   devtools \
@@ -123,7 +124,9 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   doParallel \
   dplyr \
   FNN \
+  fs \
   ggplot2 \
+  gh \
   ggmap \
   ggrepel \
   gridExtra \
@@ -147,6 +150,7 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   smoothr \
   sp \
   tidyr \
+  usethis \
   viridis \
   && install2.r --error --deps NA -- "--configure-args=\"--without-liblwgeom\"" lwgeom \
   && R -e "devtools::install_github('tidyverse/ggplot2@eecc450',upgrade_dependencies=FALSE)" \
