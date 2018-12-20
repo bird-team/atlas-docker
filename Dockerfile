@@ -158,4 +158,3 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   && R -e "devtools::install_github('ropensci/piggyback@a50bb325f87561bfc9d6dd46fb82137e08f5a365',upgrade_dependencies=FALSE)" \
   && R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz \
   && rm /tmp/rnaturalearthhires_0.1.0.tar.gz
-
