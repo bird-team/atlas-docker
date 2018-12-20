@@ -155,8 +155,8 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   && install2.r --error --deps NA -- "--configure-args=\"--without-liblwgeom\"" lwgeom \
   && R -e "devtools::install_github('tidyverse/ggplot2@eecc450',upgrade_dependencies=FALSE)" \
   && R -e "devtools::install_github('thomasp85/patchwork@6979eb1',upgrade_dependencies=FALSE)" \
+  && R -e "devtools::install_github('ropensci/piggyback@a50bb325f87561bfc9d6dd46fb82137e08f5a365',upgrade_dependencies=FALSE)" \
   && R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz \
   && R CMD INSTALL /tmp/piggyback_0.0.8.tar.gz \
-  && rm /tmp/rnaturalearthhires_0.1.0.tar.gz \
-  && rm /tmp/piggyback_0.0.8.tar.gz
+  && rm /tmp/rnaturalearthhires_0.1.0.tar.gz
 
