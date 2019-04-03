@@ -104,7 +104,7 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
     xcolor \
     xtab \
   && tlmgr path add \
-  && Rscript -e "install.packages('/tmp/xfun_0.3.tar.gz', repos = NULL, type='source')" \
+  && Rscript -e "install.packages('/tmp/xfun_0.6.tar.gz', repos = NULL, type='source')" \
   && Rscript -e "source('http://install-github.me/yihui/tinytex'); tinytex::r_texmf()" \
   && chown -R root:staff /opt/TinyTeX \
   && chmod -R g+w /opt/TinyTeX \
