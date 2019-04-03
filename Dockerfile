@@ -8,6 +8,7 @@ COPY . /tmp
 ## Add spatial support (from rocker/geospatial)
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
+    jpegoptim \
     lbzip2 \
     libfftw3-dev \
     libgdal-dev \
