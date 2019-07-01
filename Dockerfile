@@ -157,5 +157,6 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   && R -e "devtools::install_github('tidyverse/ggplot2@eecc450',upgrade_dependencies=FALSE)" \
   && R -e "devtools::install_github('thomasp85/patchwork@6979eb1',upgrade_dependencies=FALSE)" \
   && R -e "devtools::install_github('ropensci/piggyback@2680151a90b1fb174cef5afa6d225036c7dd2790',upgrade_dependencies=FALSE)" \
+  && R -e "devtools::install_github('r-spatial/leafem@842c3657595e814f215702f0d566eec3b3e2b9ca',upgrade_dependencies=FALSE)" \
   && R CMD INSTALL /tmp/rnaturalearthhires_0.1.0.tar.gz \
   && rm /tmp/rnaturalearthhires_0.1.0.tar.gz
