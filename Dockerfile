@@ -151,6 +151,7 @@ RUN echo "options(repos = 'https://mran.microsoft.com/snapshot/2018-05-16')" \
   smoothr \
   sp \
   tidyr \
+  tictoc \
   usethis \
   viridis \
   && install2.r --error --deps NA -- "--configure-args=\"--without-liblwgeom\"" lwgeom \
